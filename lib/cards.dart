@@ -44,7 +44,6 @@ class CardDataState extends State<CardData>{
 
   Widget imageDetails(){
     return Container(
-      //margin: EdgeInsets.all(15),
       child:Image.network("${this.imageUrl}", height: 650, width: 650),
     );
   }
@@ -64,8 +63,8 @@ class CardDataState extends State<CardData>{
             });
           },
   
-        ), margin: EdgeInsets.fromLTRB(7,0,7,7)),
-        Container(child:Icon(Icons.message, size:30), margin: EdgeInsets.fromLTRB(7,0,7,7)),
+        ), margin: EdgeInsets.fromLTRB(7,0,0,7)),
+        Container(child:Icon(Icons.chat_bubble_outline, size:30), margin: EdgeInsets.fromLTRB(7,0,7,7)),
         Container(child:Icon(Icons.send, size:30), margin: EdgeInsets.fromLTRB(7,0,7,7))
       ],
     );
@@ -75,9 +74,10 @@ class CardDataState extends State<CardData>{
   Widget build(BuildContext context){
     return (
       Container(
+        width: 650,
         child: Card(
-          borderOnForeground: true,
-          elevation: 0.5,
+          
+          elevation: 1,
           margin: EdgeInsets.all(15),
           child: Column(
             children: <Widget>[
